@@ -248,6 +248,8 @@ public class Player : MonoBehaviour
         {
             Throw(x, y);
             canShoot = false;
+
+            FindObjectOfType<GameHost>().mesaj += "Play 1\n";
         }
     }
 
@@ -358,6 +360,8 @@ public class Player : MonoBehaviour
             FindObjectOfType<GameHost>().mesaj += "Destroy " + playerNumber + "\n";
         else if(FindObjectOfType<GameHost>() != null)
             FindObjectOfType<GameHost>().mesaj += "Damage " + playerNumber + "\n";
+
+        FindObjectOfType<GameHost>().mesaj += "Play 0\n";
     }
 
     public void Damage()
